@@ -38,29 +38,33 @@ Place this code right before the closing `</body>` tag at the bottom of your cod
 **Note: Do not wrap this in jQuery. Please make sure that this inline code so that the** `<script></script>` **tags are used. Do not put this JavaScript in another file as it may not work as intended.**
 ```
 <script type="text/javascript">
-     document.addEventListener("DOMContentLoaded", () => {
-       console.log("DOM ready!");
-  
-       const iframe = document.getElementById("ddn-iframe");
-  
-       iframe.onload = function (e) {
-         const frame = e.target;
-         frame.contentWindow.postMessage({
-           iframe: true,
-	       containerBgColor: "#fff"
-         }, '*');
-       }
-  
-       // Message Event Handler
-       function resizeIframe(e) {
-         if (e.origin !== window.location.origin) {
-           iframe.height = e.data + "px";
-         }
-       }
-  
-       window.addEventListener("message", resizeIframe);
-     });
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM ready!");
+
+    const iframe = document.getElementById("ddn-iframe");
+
+    iframe.onload = function (e) {
+      const frame = e.target;
+      frame.contentWindow.postMessage(
+        {
+          iframe: true,
+          containerBgColor: "#fff",
+        },
+        "*"
+      );
+    };
+
+    // Message Event Handler
+    function resizeIframe(e) {
+      if (e.origin !== window.location.origin) {
+        iframe.height = e.data + "px";
+      }
+    }
+
+    window.addEventListener("message", resizeIframe);
+  });
 </script>
+
 ```
 
 Please visit [DiscountDrugNetwork.com](https://discountdrugnetwork.com) for customer support. 
