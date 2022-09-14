@@ -29,7 +29,7 @@ Next, please paste this code wherever you want your DDN+ widget to display.
 
 ```
 <div id="iframe__container">
-   <iframe id="ddn-iframe" src="https://ddn-search-fe.ddndev.com/?iframe=true" scrolling="no"></iframe>
+   <iframe id="ddn-iframe" src="https://discountdrugnetwork.com/?iframe=true" scrolling="no"></iframe>
 </div>
 ```
 
