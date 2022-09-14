@@ -1,4 +1,4 @@
-# Discount Drug Network BETA Embed Instructions
+# Discount Drug Network Embed Instructions
 Thank you for using Discount Drug Network Plus! Here are the instructions and things to note while setting it up. 
 
 ## Head section
@@ -51,6 +51,7 @@ Place this code right before the closing `</body>` tag at the bottom of your cod
          const frame = e.target;
          frame.contentWindow.postMessage({
            iframe: true,
+           groupID: "YOUR-GROUP-ID",
            containerBgColor: "#fff"
          }, '*');
        }
